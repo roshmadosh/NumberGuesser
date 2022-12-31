@@ -1,7 +1,6 @@
 package com.hiroshisprojects
 
 import java.util.Random
-import kotlin.system.exitProcess
 
 
 fun main() {
@@ -19,7 +18,7 @@ fun main() {
         println()
 
         // get user input
-        println("Please enter a number between 1 and 100:")
+        println("Please enter a number between 1 and 100, or type 'list' or 'quit':")
         val input = readlnOrNull()
 
         // perform options, if entered
@@ -31,7 +30,7 @@ fun main() {
             }
             Options.QUIT.label -> {
                 println("Exiting app...")
-                exitProcess(1)
+                return
             }
         }
 
